@@ -16,11 +16,11 @@ function peopleSearch(){
     })
 } 
 function displayResults(data){
-    while(planets.firstChild){
-        planets.removeChild(planets.firstChild)
-    }
     while(people.firstChild){
         people.removeChild(people.firstChild)
+    }
+    while(planets.firstChild){
+        planets.removeChild(planets.firstChild)
     }
     while(spaceships.firstChild){
         spaceships.removeChild(spaceships.firstChild)
@@ -51,11 +51,11 @@ function planetSearch(){
 }
 
 function displayResults2(data){
-    while(planets.firstChild){
-        planets.removeChild(planets.firstChild)
-    }
     while(people.firstChild){
         people.removeChild(people.firstChild)
+    }
+    while(planets.firstChild){
+        planets.removeChild(planets.firstChild)
     }
     while(spaceships.firstChild){
         spaceships.removeChild(spaceships.firstChild)
@@ -84,11 +84,11 @@ function starshipsSearch(){
     })
 }
 function displayResults3(data){
-    while(planets.firstChild){
-        planets.removeChild(planets.firstChild)
-    }
     while(people.firstChild){
         people.removeChild(people.firstChild)
+    }
+    while(planets.firstChild){
+        planets.removeChild(planets.firstChild)
     }
     while(spaceships.firstChild){
         spaceships.removeChild(spaceships.firstChild)
@@ -117,11 +117,11 @@ function speciesSearch(){
     })
 }
 function displayResults4(data){
-    while(planets.firstChild){
-        planets.removeChild(planets.firstChild)
-    }
     while(people.firstChild){
         people.removeChild(people.firstChild)
+    }
+    while(planets.firstChild){
+        planets.removeChild(planets.firstChild)
     }
     while(spaceships.firstChild){
         spaceships.removeChild(spaceships.firstChild)
