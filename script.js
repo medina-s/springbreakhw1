@@ -1,7 +1,4 @@
-// let people = document.getElementsByClassName(".people");
-// let planets = document.getElementsByClassName(".planets");
-// let spaceships = document.getElementsByClassName('.spaceships');
-// let species = document.getElementsByClassName(".species");
+
 // People activating part
 
 let peopleSearchButton = document.getElementById("peopleSearch")
@@ -16,25 +13,15 @@ function peopleSearch(){
     })
 } 
 function displayResults(data){
-    while(people.firstChild){
-        people.removeChild(people.firstChild)
-    }
-    while(planets.firstChild){
-        planets.removeChild(planets.firstChild)
-    }
-    while(spaceships.firstChild){
-        spaceships.removeChild(spaceships.firstChild)
-    }
-    while(species.firstChild){
-        species.removeChild(species.firstChild)
-    }
+    while(results.firstChild){
+        results.removeChild(results.firstChild)
+    }       
     for (p of data.results){
         let name = document.createElement("p");
         name.innerHTML = p.name;
-        people.appendChild(name);
+        results.appendChild(name);
     }
 }
-
 
 // Planet activating part
 
@@ -46,28 +33,8 @@ function planetSearch(){
     .then((res)=> res.json())
     .then(function(data){
         console.log(data);
-        displayResults2 (data);
+        displayResults (data);
     })
-}
-
-function displayResults2(data){
-    while(people.firstChild){
-        people.removeChild(people.firstChild)
-    }
-    while(planets.firstChild){
-        planets.removeChild(planets.firstChild)
-    }
-    while(spaceships.firstChild){
-        spaceships.removeChild(spaceships.firstChild)
-    }
-    while(species.firstChild){
-        species.removeChild(species.firstChild)
-    }
-    for (p of data.results){
-        let plan = document.createElement("p");
-        plan.innerHTML = p.name;
-        planets.appendChild(plan);
-    }
 }
 
 // Starships activating part
@@ -80,27 +47,8 @@ function starshipsSearch(){
     .then((res)=> res.json())
     .then (function(data){
         console.log(data);
-        displayResults3 (data);
+        displayResults (data);
     })
-}
-function displayResults3(data){
-    while(people.firstChild){
-        people.removeChild(people.firstChild)
-    }
-    while(planets.firstChild){
-        planets.removeChild(planets.firstChild)
-    }
-    while(spaceships.firstChild){
-        spaceships.removeChild(spaceships.firstChild)
-    }
-    while(species.firstChild){
-        species.removeChild(species.firstChild)
-    }
-    for (p of data.results){
-        let space = document.createElement("p");
-        space.innerHTML = p.model;
-        spaceships.appendChild(space);
-    }
 }
 
 // Species activating part
@@ -113,43 +61,7 @@ function speciesSearch(){
     .then((res)=> res.json())
     .then (function(data){
         console.log(data);
-        displayResults4 (data);
+        displayResults (data);
     })
 }
-function displayResults4(data){
-    while(people.firstChild){
-        people.removeChild(people.firstChild)
-    }
-    while(planets.firstChild){
-        planets.removeChild(planets.firstChild)
-    }
-    while(spaceships.firstChild){
-        spaceships.removeChild(spaceships.firstChild)
-    }
-    while(species.firstChild){
-        species.removeChild(species.firstChild)
-    }
-    for (p of data.results){
-        let specie = document.createElement("p");
-        specie.innerHTML = p.name;
-        species.appendChild(specie);
-    }
-}
 
-// Adding pagination
-
-function nextPage(e){
-    pageNumber++;
-    fetchResults(e);
-    console.log("Page number:", pageNumber);
-}//5
-
-function previousPage(e){
-    if(pageNumber > 0) {
-        pageNumber--;
-    } else {
-        return;
-    }
-    fetchResults(e);
-    console.log("Page:", pageNumber)
-}//5
