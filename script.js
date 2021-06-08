@@ -16,11 +16,17 @@ function peopleSearch(){
     })
 } 
 function displayResults(data){
+    while(planets.firstChild){
+        planets.removeChild(planets.firstChild)
+    }
     while(people.firstChild){
         people.removeChild(people.firstChild)
     }
-    while(planets.firstChild){
-        planets.removeChild(planets.firstChild)
+    while(spaceships.firstChild){
+        spaceships.removeChild(spaceships.firstChild)
+    }
+    while(species.firstChild){
+        species.removeChild(species.firstChild)
     }
     for (p of data.results){
         let name = document.createElement("p");
@@ -51,6 +57,12 @@ function displayResults2(data){
     while(people.firstChild){
         people.removeChild(people.firstChild)
     }
+    while(spaceships.firstChild){
+        spaceships.removeChild(spaceships.firstChild)
+    }
+    while(species.firstChild){
+        species.removeChild(species.firstChild)
+    }
     for (p of data.results){
         let plan = document.createElement("p");
         plan.innerHTML = p.name;
@@ -80,6 +92,9 @@ function displayResults3(data){
     }
     while(spaceships.firstChild){
         spaceships.removeChild(spaceships.firstChild)
+    }
+    while(species.firstChild){
+        species.removeChild(species.firstChild)
     }
     for (p of data.results){
         let space = document.createElement("p");
